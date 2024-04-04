@@ -21,14 +21,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Loop through them
   images.forEach(function(img) {
-    // Listen for the 'load' event
-    img.addEventListener('load', function() {
-      // Add a delay before adding the 'loaded' class to create the effect
-      setTimeout(function() {
-        // Add the class 'loaded' to the image
-        img.classList.add('loaded');
-      }, 500); // Adjust the delay as needed
-    });
+    // Check if the image is already loaded
+    if (img.complete) {
+      // If already loaded, add the 'loaded' class immediately
+      img.classList.add('loaded');
+    } else {
+      // If not loaded yet, listen for the 'load' event
+      img.addEventListener('load', function() {
+        // Add a delay before adding the 'loaded' class to create the effect
+        setTimeout(function() {
+          // Add the class 'loaded' to the image
+          img.classList.add('loaded');
+        }, 500); // Adjust the delay as needed
+      });
+    }
   });
 });
 </script>
+
+
