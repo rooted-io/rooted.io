@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<img src="images/rooted-text-only.png" alt="snowflake" width="180" height="50">  
-<br/>
 
 # POSTS
 
