@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom CSS for image animation */
+img {
+    opacity: 0; /* Initially, set image opacity to 0 */
+    transition: opacity 1s ease-in-out; /* Define transition for opacity change */
+}
+
+img.loaded {
+    opacity: 1; /* When image is loaded, set opacity to 1 */
+}
