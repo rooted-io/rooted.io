@@ -2,24 +2,7 @@
 layout: default
 ---
 
-<img src="images/rooted.png" alt="logo" width="100" height="80">  
-
-# POSTS
-
-Posts and articles related to cybersecurity.  
-
-## 04/04/2024
-
-- [*Domain Fronting*](./pages/posts/04-04-24/domain-fronting.md)
-- [*Hacking Kubernetes Kubelet*](./pages/posts/04-04-24/kubernetes.md)
-- [*Offensive Security Privacy*](./pages/posts/04-04-24/offsec-privacy.md)
-
-
----
-layout: default
----
-
-<img src="images/rooted.png" alt="logo" width="100" height="80" class="fade-in">  
+<img src="images/rooted.png" alt="logo" width="150" height="100" class="fade-in">  
 
 # POSTS
 
@@ -40,8 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
   images.forEach(function(img) {
     // Listen for the 'load' event
     img.addEventListener('load', function() {
-      // Add the class 'loaded' to the image
-      img.classList.add('loaded');
+      // Add a delay before adding the 'loaded' class to create the effect
+      setTimeout(function() {
+        // Add the class 'loaded' to the image
+        img.classList.add('loaded');
+      }, 500); // Adjust the delay as needed
     });
   });
 });
