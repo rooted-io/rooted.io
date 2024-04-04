@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<img src="images/rooted.png" alt="logo" width="150" height="100" class="fade-in">  
+<img src="images/rooted.png" alt="logo" width="150" height="100" class="fade-in-index">   
 
 # POSTS
 
@@ -16,8 +16,8 @@ Posts and articles related to cybersecurity.
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Get all images with the class 'fade-in'
-  var images = document.querySelectorAll('.fade-in');
+  // Get all images with the class 'fade-in-index'
+  var images = document.querySelectorAll('.fade-in-index');
 
   // Loop through them
   images.forEach(function(img) {
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+
 
 
 
