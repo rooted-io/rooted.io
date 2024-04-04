@@ -4,13 +4,13 @@
 @import "{{ site.theme }}";
 
 /* Custom CSS for image animation */
-.fade-in-index {
-    opacity: 0; /* Initially, set image opacity to 0 */
-    transform: translateY(-100px); /* Move image up initially */
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Define transitions for opacity and transform */
-}
+// .fade-in-index {
+//     opacity: 0; /* Initially, set image opacity to 0 */
+//     transform: translateY(-100px); /* Move image up initially */
+//     transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Define transitions for opacity and transform */
+// }
 
-.fade-in-index.loaded {
-    opacity: 1; /* When image is loaded, set opacity to 1 */
-    transform: translateY(0); /* Move image back to its original position */
-}
+// .fade-in-index.loaded {
+//     opacity: 1; /* When image is loaded, set opacity to 1 */
+//     transform: translateY(0); /* Move image back to its original position */
+// }
