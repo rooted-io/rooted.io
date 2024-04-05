@@ -1,3 +1,5 @@
+# Cryptography Primer  
+
 Since we recently noticed some confusion, even among industry professionals, we decided to write a brief primer on the most well-known *cryptographic algorithms* and their applications:  
 
 - 𝐀𝐄𝐒 (𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐄𝐧𝐜𝐫𝐲𝐩𝐭𝐢𝐨𝐧 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝): AES is a symmetric key algorithm that operates on blocks of data, using key sizes of 128, 192, or 256 bits.  
@@ -17,3 +19,7 @@ Primarily employed for ensuring data integrity, creating digital signatures, com
 - 𝐀𝐫𝐠𝐨𝐧2: Argon2 is a key derivation function specifically designed for hashing passwords.  
 It is resistant to GPU and ASIC attacks and provides a high level of security.  
 Primarily used for securely hashing passwords in applications where user credentials are stored.  
+
+<br>  
+
+- [Back to main page](../../../index.md)  

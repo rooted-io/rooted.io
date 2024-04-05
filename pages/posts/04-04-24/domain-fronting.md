@@ -24,6 +24,8 @@ wget -q -O - https://www.amazon.com --header 'Host: aws.amazon.com' | grep -o '<
 If you wish to assist in preventing internet censorship, you can volunteer to run [*Snowflake*](https://snowflake.torproject.org/).  
 Snowflake is a proxy that employs *domain fronting* to enable access to the [*Tor network*](https://en.wikipedia.org/wiki/Tor_(network)):  
 
+<br>  
+
 <img src="images/snowflake.png" alt="snowflake" width="650" height="600">  
 
 
