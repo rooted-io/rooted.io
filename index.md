@@ -7,6 +7,10 @@ layout: default
 
 Posts and articles related to cybersecurity.  
 
+## 05/04/2024
+
+- [*Cryptography Primer*](./pages/posts/05-04-24/cryptography-primer.md)  
+
 ## 04/04/2024
 
 - [*Domain Fronting*](./pages/posts/04-04-24/domain-fronting.md)
