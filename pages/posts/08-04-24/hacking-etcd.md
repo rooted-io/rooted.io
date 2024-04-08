@@ -39,10 +39,46 @@ P4SsW0rd_+^"!
 
 
 It's worth noting that, at this juncture, an attacker could potentially inflict damage on the system by deleting and/or modifying the values of the etcd keys.  
-In this specific scenario, if the target server also exposes SSH, the attacker might also attempt to gain access using the values of the keys */ssh/user/* and */ssh/pass/*.  
-Now, please bear in mind that this is merely a hypothetical example.  
-An attacker would need to be exceptionally fortunate to stumble upon such data.  
-Nevertheless, albeit rare, such occurrences can transpire, and we can assure you that they have occurred in the past.  
+In this specific scenario, if the target server also exposes SSH, the attacker might also attempt to gain access using the values of the keys */ssh/user/* and */ssh/pass/*:  
+
+```console
+ssh system@$EXPOSED_IP 
+system password:  P4SsW0rd_+^"!
+```   
+
+The attacker can also add a new key value:  
+```console
+etcdctl put rooted P4wn3D!🖕
+```  
+
+or retrieve etcd users and roles:  
+```console
+etcdctl user list; etcdctl role list
+```  
+
+There have also been instances where [*PostgreSQL*](https://www.postgresql.org/) configurations were stored in one key in etcd, and its credentials in another.  
+In that particular scenario, PostgreSQL was also exposed as a service on the server, allowing us to query a list of tables and all the data contained within them.  
+Furthermore, we discovered wildcard certificates for the entire domain of a company, intentionally redacted and obscured as follows:  
+
+```console
+/apisix/ssl/982578101
+{"id":"423764178751193820","create_time":1662112733,"update_time":1689821613,"cert":"-----BEGIN CERTIFICATE-----\nMIIGLDCCBRSgAwIBAgIQCJY\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMITqCwtukZ7u9VLL3JAq3Wdy2moKLvvC8tVmRzkAe\n0xQCkRKIjbBG80MSyDX/R4uYgj6ZiNT/Zg6GI6RofgqgpDdssLc0XIRQEotxIZcK\nzP3pGJ9FCbMHmMLLyuBd+uCWvVcF2ogYAawufChS/PT61D9rqzPRS5I2uqa3tmIT\n44JhJgWhBnFMb7AGQkvNq9KNS9dd3GWc17H/dXa1enoxzWjE0hBdFjxPhUb0W3wi\n8o34/m8Fxw==\n-----END CERTIFICATE-----\n","key":"-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAzF/2R4nLsR8JCsX3Pl1kAML/zy0fmBFRXhPWmE7SGYoiWciq\niIalocl4DM7b5KEk5XwsFdMIEovyy0fgTOhquBwI+t35v7BN5b/BV/zNXHlmqqSs\nCITYs+C/7Ez6C0rsC7pyAmOUaAat4FsaSzvm/Z84s2qwtdejcwnv\n-----END RSA PRIVATE KEY-----\n",
+"snis":["*.company.com","company.com"],"status":1,"validity_start":1689638400,"validity_end":1723593599}
+```  
+
+These are likely SSL/TLS certificates for [*Apache APISIX*](https://github.com/apache/apisix).  
+APISIX is an open-source, cloud-native microservices API gateway that it is used for managing and securing (sigh 😔) APIs.  
+
+Here is a list of attacks that a threat actor can probably implement with access to such certificates:  
+- *Man-in-the-Middle (MitM) Attacks*
+- *Data Interception*
+- *Traffic Redirection*
+- *Session Hijacking*
+- *SSL Stripping*
+- *Impersonation Attacks*
+- *Replay Attacks*
+
+Keep in mind that it is rare to encounter exposed instances of etcd containing keys with this type of sensitive data, but it has occurred in the past following some reconnaissance efforts.  
 
 
 This scenario serves as a [*yet another reminder*](../04-04-24/kubernetes.md) to consistently implement robust authentication mechanisms for our systems and to refrain from exposing them to the entire world unless absolutely necessary (which, in 99.99% of cases, it is not).  
