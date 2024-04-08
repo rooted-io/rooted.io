@@ -45,7 +45,7 @@ It's worth noting that, at this juncture, an attacker could potentially inflict 
 In this specific scenario, if the server's IP also exposes SSH, the attacker might also attempt to gain access using the values of the keys */ssh/user/* and */ssh/pass/*.  
 
 
-This scenario serves as a yet another reminder to consistently implement robust authentication mechanisms for our systems and to refrain from exposing them to the entire world unless absolutely necessary (which, in 99.99% of cases, it is not).  
+This scenario serves as a [*yet another reminder*](../04-04-24/kubernetes.md) to consistently implement robust authentication mechanisms for our systems and to refrain from exposing them to the entire world unless absolutely necessary (which, in 99.99% of cases, it is not).  
 
 
 <br>  
