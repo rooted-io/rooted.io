@@ -39,7 +39,7 @@ P4SsW0rd_+^"!
 
 
 It's worth noting that, at this juncture, an attacker could potentially inflict damage on the system by deleting and/or modifying the values of the etcd keys.  
-In this specific scenario, if the server's IP also exposes SSH, the attacker might also attempt to gain access using the values of the keys */ssh/user/* and */ssh/pass/*.  
+In this specific scenario, if the target server also exposes SSH, the attacker might also attempt to gain access using the values of the keys */ssh/user/* and */ssh/pass/*.  
 Now, please bear in mind that this is merely a hypothetical example.  
 An attacker would need to be exceptionally fortunate to stumble upon such data.  
 Nevertheless, albeit rare, such occurrences can transpire, and we can assure you that they have occurred in the past.  
