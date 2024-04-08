@@ -7,6 +7,10 @@ layout: default
 
 Posts and articles related to cybersecurity.  
 
+## 08/04/2024
+
+- [*PoC: Hacking Systems via Exposed ETCD Instances*](./pages/posts/08-04-24/hacking-etcd.md)  
+
 ## 05/04/2024
 
 - [*Cryptography Primer*](./pages/posts/05-04-24/cryptography-primer.md)  
