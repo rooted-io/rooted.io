@@ -34,7 +34,7 @@ wBtkA97eCyqPfQWtGBXf35T5AYbAuKGrQ1Ifq6wgzwjhZXtr87yQDgokSjfiVCVI
 system  
 
 /ssh/pass/
-P4SsW0rd_+^"!
+Pp4Ss_W.0rd_
 ```  
 
 > Note  
@@ -46,7 +46,7 @@ In this specific scenario, if the target server also exposes SSH, the attacker m
 
 ```bash
 ssh system@$EXPOSED_IP 
-system password:  P4SsW0rd_+^"!
+system password:  Pp4Ss_W.0rd_
 ```   
 
 The attacker can also add a new key value:  
