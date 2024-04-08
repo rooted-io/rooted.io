@@ -70,13 +70,13 @@ These are likely SSL/TLS certificates for [*Apache APISIX*](https://github.com/a
 APISIX is an open-source, cloud-native microservices API gateway that it is used for managing and securing (sigh 😔) APIs.  
 
 Here is a list of attacks that a threat actor can probably implement with access to such certificates:  
-- *Man-in-the-Middle (MitM) Attacks*
-- *Data Interception*
-- *Traffic Redirection*
-- *Session Hijacking*
-- *SSL Stripping*
-- *Impersonation Attacks*
-- *Replay Attacks*
+- **Man-in-the-Middle (MitM) Attacks**
+- **Data Interception**
+- **Traffic Redirection**
+- **Session Hijacking**
+- **SSL Stripping**
+- **Impersonation Attacks**
+- **Replay Attacks**
 
 Keep in mind that it is rare to encounter exposed instances of etcd containing keys with this type of sensitive data, but it has occurred in the past following some reconnaissance efforts.  
 
