@@ -34,7 +34,7 @@ system
 P4SsW0rd_+^"!
 ```  
 
-> Note
+> Note  
 > the attacker can also list all the etcd peers with this command: `etcdctl member list`  
 
 Now, please bear in mind that this is merely a hypothetical example.  
