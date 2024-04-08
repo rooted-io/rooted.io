@@ -37,12 +37,12 @@ P4SsW0rd_+^"!
 > Note  
 > the attacker can also list all the etcd peers with this command: `etcdctl member list`  
 
-Now, please bear in mind that this is merely a hypothetical example.  
-An attacker would need to be exceptionally fortunate to stumble upon such data.  
-Nevertheless, albeit rare, such occurrences can transpire, and we can assure you that they have occurred in the past.  
 
 It's worth noting that, at this juncture, an attacker could potentially inflict damage on the system by deleting and/or modifying the values of the etcd keys.  
 In this specific scenario, if the server's IP also exposes SSH, the attacker might also attempt to gain access using the values of the keys */ssh/user/* and */ssh/pass/*.  
+Now, please bear in mind that this is merely a hypothetical example.  
+An attacker would need to be exceptionally fortunate to stumble upon such data.  
+Nevertheless, albeit rare, such occurrences can transpire, and we can assure you that they have occurred in the past.  
 
 
 This scenario serves as a [*yet another reminder*](../04-04-24/kubernetes.md) to consistently implement robust authentication mechanisms for our systems and to refrain from exposing them to the entire world unless absolutely necessary (which, in 99.99% of cases, it is not).  
