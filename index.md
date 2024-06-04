@@ -7,6 +7,11 @@ layout: default
 
 Posts and articles related to cybersecurity.  
 
+
+## 02/07/2024
+- [*AWS Red Teaming: TTPs*](./pages/posts/02-07-24/aws-red-teaming.md)  
+
+
 ## 04/06/2024
 - [*CI/CD Security: PPE*](./pages/posts/04-06-24/pipeline-security.md)  
 
