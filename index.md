@@ -5,7 +5,7 @@ layout: default
 
 # POSTS
 
-Posts and articles related to cybersecurity.  
+Cybersecurity Rants.  
 
 
 ## 02/07/2024
