@@ -15,6 +15,9 @@ Posts and articles related to cybersecurity.
 ## 04/06/2024
 - [*CI/CD Security: PPE*](./pages/posts/04-06-24/pipeline-security.md)  
 
+## 20/05/2024
+- [*The Problem With Bug Bounty*](./pages/posts/20-05-24/bug-bounty.md)  
+
 ## 11/05/2024
 - [*Buffer Overflow: ELI5*](./pages/posts/11-05-24/buffer-overflow-eli5.md)  
 
