@@ -15,6 +15,9 @@ Posts and articles related to cybersecurity.
 ## 04/06/2024
 - [*CI/CD Security: PPE*](./pages/posts/04-06-24/pipeline-security.md)  
 
+## 11/05/2024
+- [*Buffer Overflow: ELI5*](./pages/posts/11-05-24/buffer-overflow-eli5.md)  
+
 ## 08/04/2024
 
 - [*PoC: Hacking Systems via Exposed ETCD Instances*](./pages/posts/08-04-24/hacking-etcd.md)  

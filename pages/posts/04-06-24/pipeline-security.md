@@ -11,7 +11,6 @@ In the video below we demonstrate a live exfiltration of secrets, via remote cod
 
 <video width="850" controls>
   <source src="media/ppe.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>  
 
 <br/>
