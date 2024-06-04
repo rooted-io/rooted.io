@@ -3,9 +3,7 @@ layout: default
 ---
 
 
-# BLOG POSTS
-
-Cybersecurity Rants.  
+# CYBERSECURITY RANTS
 
 
 ## 02/07/2024
